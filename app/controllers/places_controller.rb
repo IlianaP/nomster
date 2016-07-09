@@ -12,13 +12,16 @@ class PlacesController < ApplicationController
 	end 
 
 	def create 
-		binding.pry
-		@place = Place.create(name: params[:name], address: params[:address], description: params[:description])
-		render :show
+		@place = Place.create(place_params)
+		redirect_to root_path
 	end
 
 	def new
 		@place = Place.new
+	end 
+
+	def place_params 
+		params.require(:place).permit(:name, :description, :address) 
 	end 
 
 end 
