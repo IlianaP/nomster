@@ -1,5 +1,6 @@
 class Place < ActiveRecord::Base
-	# attr_accessor :address, :name, :description
+	# attr_accessor :address, :name, :description 
+	belongs_to :user
 end
 
 
