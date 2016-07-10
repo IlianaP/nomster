@@ -1,6 +1,7 @@
 class Place < ActiveRecord::Base
 	# attr_accessor :address, :name, :description 
-	belongs_to :user
+	belongs_to :user 
+	validates :name, presence: true
 end
 
 
