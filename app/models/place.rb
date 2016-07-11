@@ -1,6 +1,7 @@
 class Place < ActiveRecord::Base
 	# attr_accessor :address, :name, :description 
 	belongs_to :user 
+	has_many :comments 
 	validates :name, length: { minimum: 3, 
 		too_short: "%{count} characters is the minimum allowed" }
 	validates :address, presence: true 
