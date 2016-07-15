@@ -68,7 +68,8 @@
   </button> 
 </div> 
 <% @place.photos.each do |photo| %> 
-  <=% photo %> 
+  <%= image_tag photo.picture%>
+  <%= photo.caption %> 
 <% end %>
 <div class="clear"></div>
 <% @place.comments.each do |comment| %> 
