@@ -26,7 +26,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr7t1NmFz5_teA1UMZpSBAjAjDiziOGsI&callback=initMap">
     </script>
 
-	<div id="map"></div> 
+	<div id="map"></div>  
   <br />
 	<div class = "pull-right"> 
 		<% if current_user && current_user == @place.user %> 
@@ -58,7 +58,8 @@
     <%end%>
 </div> 
 
-<br />
+<br /> 
+<hr>
 <div class="col-xs-10 col-xs-offset-1"> 
   <h1 class = "pull-left"> Comments </h1> 
   <% if @place.comments.present? %> 
@@ -127,5 +128,4 @@
       <% end %>
     </div>
   </div>
-</div>
 </div>

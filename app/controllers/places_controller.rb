@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
 	def index 
 		# @places = Place.all #SELECT * FROM places 
-		@places = Place.paginate(:page => params[:page], :per_page => 5) 
+		@places = Place.paginate(:page => params[:page], :per_page => 5).order('id DESC')
 		
 	end 
 
