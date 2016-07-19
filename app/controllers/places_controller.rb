@@ -7,11 +7,11 @@ class PlacesController < ApplicationController
 		
 	end 
 
-	def show
-		@place = Place.where(id: params[:id]).first #SELECT TOP 1 FROM places WHERE id = 1
+	#def show
+		#@place = Place.where(id: params[:id]).first #SELECT TOP 1 FROM places WHERE id = 1
 		# @place = Place.find(params[:id])
 		# @place = Place.find_by_id(params[:id])  
-	end 
+	#end 
  
 	def create 
 		@place = current_user.places.create(place_params)
